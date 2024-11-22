@@ -73,7 +73,7 @@ export function Navbar() {
           variant="h6"
           color={isScrolling ? "gray" : "white"}
         >
-          Material Tailwind
+          Elewade Nigeria Limited
         </Typography>
         <ul
           className={`ml-10 hidden items-center gap-6 lg:flex ${
@@ -111,7 +111,7 @@ export function Navbar() {
           </IconButton>
           <a href="https://www.material-tailwind.com/blocks" target="_blank">
             <Button color={isScrolling ? "gray" : "white"} size="sm">
-              Blocks
+              Our Services
             </Button>
           </a>
         </div>
