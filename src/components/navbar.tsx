@@ -77,7 +77,7 @@ export function Navbar() {
         </Typography>
         <ul
           className={`ml-10 hidden items-center gap-6 lg:flex ${
-            isScrolling ? "text-gray-900" : "text-white"
+            isScrolling ? "text-[#6e066a]" : "text-white"
           }`}
         >
           <NavItem>Home</NavItem>
@@ -90,34 +90,34 @@ export function Navbar() {
         <div className="hidden gap-2 lg:flex lg:items-center">
           <IconButton
             variant="text"
-            color={isScrolling ? "gray" : "white"}
+            color={isScrolling ? "#6e066a" : "white"}
             size="sm"
           >
             <i className="fa-brands fa-twitter text-base" />
           </IconButton>
           <IconButton
             variant="text"
-            color={isScrolling ? "gray" : "white"}
+            color={isScrolling ? "#6e066a" : "white"}
             size="sm"
           >
             <i className="fa-brands fa-facebook text-base" />
           </IconButton>
           <IconButton
             variant="text"
-            color={isScrolling ? "gray" : "white"}
+            color={isScrolling ? "#6e066a" : "white"}
             size="sm"
           >
             <i className="fa-brands fa-instagram text-base" />
           </IconButton>
           <a href="https://www.material-tailwind.com/blocks" target="_blank">
-            <Button color={isScrolling ? "gray" : "white"} size="sm">
+            <Button color={isScrolling ? "#6e066a" : "white"} size="sm">
               Our Services
             </Button>
           </a>
         </div>
         <IconButton
           variant="text"
-          color={isScrolling ? "gray" : "white"}
+          color={isScrolling ? "text-[#6e066a]" : "white"}
           onClick={handleOpen}
           className="ml-auto inline-block lg:hidden"
         >
@@ -149,7 +149,7 @@ export function Navbar() {
               <i className="fa-brands fa-instagram text-base" />
             </IconButton>
             <a href="https://www.material-tailwind.com/blocks" target="_blank">
-              <Button color="gray" size="sm" className="ml-auto">
+              <Button color="text-[#6e066a]" size="sm" className="ml-auto">
                 Blocks
               </Button>
             </a>

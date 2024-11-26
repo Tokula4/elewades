@@ -14,10 +14,10 @@ export function FixedPlugin() {
           width={128}
           height={128}
           className="w-5 h-5"
-          alt="Material Tailwind"
+          alt="Whatsapp Line"
           src="https://www.material-tailwind.com/favicon.png"
         />{" "}
-        Made With Material Tailwind
+        Message us on Whatsapp
       </Button>
     </a>
   );

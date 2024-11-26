@@ -19,7 +19,7 @@ export function Footer() {
               color="white"
               className="mb-4"
             >
-              Material Tailwind
+              Elewade Nigeria Limited
             </Typography>
             <Typography color="white" className="mb-12 font-normal">
               The reward for getting on the stage is fame.
@@ -43,7 +43,7 @@ export function Footer() {
           </div>
           <div className="mt-8 w-full md:mt-0 md:w-auto">
             <Typography variant="h6" color="white" className="mb-3">
-              Get the app
+              Start Business with Us
             </Typography>
             <div className="flex flex-col gap-2">
               <Button
@@ -53,11 +53,11 @@ export function Footer() {
                 <Image
                   width={256}
                   height={256}
-                  src="/logos/logo-apple.png"
+                  // src="/logos/logo-apple.png"
                   className="-mt-0.5 mr-2 h-6 w-6"
                   alt="ios"
                 />
-                App Store
+                Our Service
               </Button>
               <Button
                 color="white"
@@ -70,7 +70,7 @@ export function Footer() {
                   className="-mt-0.5 mr-2 h-6 w-6"
                   alt="ios"
                 />
-                Google Play
+               Join
               </Button>
             </div>
           </div>
