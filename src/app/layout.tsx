@@ -12,7 +12,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "Elewade Nigeria Limited ",
   description:
-    "",
+    "npm",
 };
 
 export default function RootLayout({
