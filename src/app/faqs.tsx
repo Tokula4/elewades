@@ -38,7 +38,7 @@ export function Faqs() {
             variant="lead"
             className="mx-auto mb-24 !text-gray-500 lg:w-3/5"
           >
-            Have questions? We've compiled a list of frequently asked questions
+            Have questions? We&apos;ve compiled a list of frequently asked questions
             to help you get the most out of our app.
           </Typography>
         </div>
