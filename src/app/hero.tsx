@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Button,  } from "@material-tailwind/react";
+import { Button,  } from "@/components/ui/button"
 
 
 function Hero() {
@@ -26,16 +26,16 @@ function Hero() {
             <div className="flex flex-col gap-2 md:mb-2 md:w-10/12 md:flex-row">
               <Button
                 size="lg"
-                color="white"
-                className="flex justify-center items-center gap-3"
+               
+                className="flex bg-white text-black justify-center items-center gap-3"
               >
         
                 Our Service
               </Button>
               <Button
                 size="lg"
-                color="white"
-                className="flex justify-center items-center gap-3"
+               
+                className="flex  bg-white text-black justify-center items-center gap-3"
               >
         
                 Join Us
