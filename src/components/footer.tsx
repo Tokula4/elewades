@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
-import {  IconButton, Button } from "@material-tailwind/react";
+import {   Button } from "@/components/ui/button";
+import { IconButton } from "@material-tailwind/react";
+
 
 const LINKS = ["About Us", "Careers", "Press", "Blog", "Pricing"];
 const CURRENT_YEAR = new Date().getFullYear();
@@ -14,8 +16,8 @@ export function Footer() {
             <div
               
               // href=""
-              target="_blank"
-              variant="h5"
+             
+              
               color="white"
               className="mb-4"
             >
@@ -54,20 +56,20 @@ export function Footer() {
                   width={256}
                   height={256}
                   // src="/logos/logo-apple.png"
-                  className="-mt-0.5 mr-2 h-6 w-6"
+                  className="-mt-0.5 text-white mr-2 h-6 w-6"
                   alt="ios"
                 />
                 Our Service
               </Button>
               <Button
                 color="white"
-                className="flex items-center justify-center"
+                className="flex items-center text-white justify-center"
               >
                 <Image
                   width={256}
                   height={256}
                   src="/logos/logo-google.png"
-                  className="-mt-0.5 mr-2 h-6 w-6"
+                  className="-mt-0.5 mr-2 text-white h-6 w-6"
                   alt="ios"
                 />
                Join
@@ -80,13 +82,13 @@ export function Footer() {
             color="white"
             className="text-center font-normal opacity-75"
           >
-            &copy; {CURRENT_YEAR} Made with{" "}
+            &copy; {CURRENT_YEAR} brought to{" "}
             <a href="https://www.material-tailwind.com" target="_blank">
-              Material Tailwind
+              you by Elewade Nigeria Limited
             </a>{" "}
             by{" "}
             <a href="https://www.creative-tim.com" target="_blank">
-              Creative Tim
+              Elewades Team
             </a>
             .
           </div>
