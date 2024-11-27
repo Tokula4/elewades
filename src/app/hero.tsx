@@ -20,9 +20,7 @@ function Hero() {
               Our app is here to empower you on your quest for knowledge,
               anytime and anywhere.
             </div>
-            <div className="mb-4" color="white" >
-              Get the app
-            </div>
+          
             <div className="flex flex-col gap-2 md:mb-2 md:w-10/12 md:flex-row">
               <Button
                 size="lg"
