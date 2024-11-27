@@ -31,7 +31,7 @@ export function Faqs() {
     <section className="px-8 py-20" role="region" aria-labelledby="faq-title">
       <div className="container max-w-6xl mx-auto">
         <div className="text-center">
-          <div id="faq-title" className="mb-4">
+          <div id="faq-title" className="mb-4 scroll-m-20  pb-2 text-3xl font-semibold tracking-tight first:mt-0">
             Frequently Asked Questions
           </div>
           <div
@@ -45,14 +45,14 @@ export function Faqs() {
 
         <div className="grid gap-20 md:grid-cols-1 lg:grid-cols-3">
           {FAQS.map(({ title, desc }) => (
-            <Card key={title} shadow={false} color="transparent">
-              <div  color="blue-gray" className="pb-6">
+            <div key={title}  color="transparent">
+              <div  color="blue-gray" className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0"> 
                 {title}
               </div>
               <div className="font-normal !text-gray-500 pt-2">
                 {desc}
               </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>
