@@ -6,6 +6,8 @@ import {
   
   Button,
 } from "@material-tailwind/react";
+
+
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 interface NavItemProps {
@@ -17,9 +19,9 @@ function NavItem({ children, href }: NavItemProps) {
     <li>
       <div
        
-        href={href || "#"}
-        target={href ? "_blank" : "_self"}
-        variant="small"
+        // href={href || "#"}
+        // target={href ? "_blank" : "_self"}
+        
         className="font-medium"
       >
         {children}
@@ -69,7 +71,7 @@ export function Navbar() {
         <div
          
           // href=""
-          target="_blank"
+          
          
           className={isScrolling ? "gray" : "white"}
         >
