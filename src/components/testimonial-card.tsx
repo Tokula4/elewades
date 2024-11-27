@@ -1,6 +1,5 @@
 import React from "react";
-import { Card, CardBody, Avatar } from "@material-tailwind/react";
-
+import {Avatar} from "@/components/ui/avatar"
 interface TestimonialCardProps {
   img: string;
   feedback: string;
