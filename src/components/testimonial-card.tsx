@@ -15,8 +15,8 @@ export function TestimonialCard({
   title,
 }: TestimonialCardProps) {
   return (
-    <Card shadow={false} className="items-center text-center">
-      <CardBody>
+    <div  className="items-center text-center">
+      <div>
         <Avatar src={img} className="mb-3" alt={client} size="lg" />
         <div color="blue-gray">
           {client}
@@ -30,8 +30,8 @@ export function TestimonialCard({
         >
           &quot;{feedback}&quot;
         </div>
-      </CardBody>
-    </Card>
+      </div>
+    </div>
   );
 }
 
