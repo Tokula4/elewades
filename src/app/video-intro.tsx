@@ -14,7 +14,7 @@ export function VideoIntro() {
         <Image
           width={768}
           height={400}
-          src="/image/Background.png"
+          src="/image/banner.jpg"
           className="w-full object-cover scale-110 rounded-xl h-full"
           alt=""
         />
