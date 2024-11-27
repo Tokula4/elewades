@@ -31,27 +31,27 @@ export function Faqs() {
     <section className="px-8 py-20" role="region" aria-labelledby="faq-title">
       <div className="container max-w-6xl mx-auto">
         <div className="text-center">
-          <Typography id="faq-title" variant="h2" className="mb-4">
+          <div id="faq-title" className="mb-4">
             Frequently Asked Questions
-          </Typography>
-          <Typography
-            variant="lead"
+          </div>
+          <div
+           
             className="mx-auto mb-24 !text-gray-500 lg:w-3/5"
           >
             Have questions? We&apos;ve compiled a list of frequently asked questions
             to help you get the most out of our app.
-          </Typography>
+          </div>
         </div>
 
         <div className="grid gap-20 md:grid-cols-1 lg:grid-cols-3">
           {FAQS.map(({ title, desc }) => (
             <Card key={title} shadow={false} color="transparent">
-              <Typography variant="h4" color="blue-gray" className="pb-6">
+              <div  color="blue-gray" className="pb-6">
                 {title}
-              </Typography>
-              <Typography className="font-normal !text-gray-500 pt-2">
+              </div>
+              <div className="font-normal !text-gray-500 pt-2">
                 {desc}
-              </Typography>
+              </div>
             </Card>
           ))}
         </div>
