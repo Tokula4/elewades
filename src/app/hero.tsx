@@ -17,8 +17,8 @@ function Hero() {
               
               className="mb-7 !text-white md:pr-16 xl:pr-28"
             >
-              Our app is here to empower you on your quest for knowledge,
-              anytime and anywhere.
+             At Elewade Nigeria Limited, we pride ourselves on delivering top-notch services that cater to your diverse needs. 
+             With a strong commitment to quality and customer satisfaction
             </div>
           
             <div className="flex flex-col gap-2 md:mb-2 md:w-10/12 md:flex-row">

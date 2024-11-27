@@ -14,11 +14,11 @@ export function VideoIntro() {
         <Image
           width={768}
           height={400}
-          src="/image/banner.jpg"
+          src="/image/Background.png"
           className="w-full object-cover scale-110 rounded-xl h-full"
           alt=""
         />
-        <div className="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 z-10">
+        <div className="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 z-10" >
           <div color="white" className="rounded-full bg-white " >
             <PlayIcon className="h-6 w-6" />
           </div>
