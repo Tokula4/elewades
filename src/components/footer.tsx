@@ -53,6 +53,7 @@ export function Footer() {
                 className="flex items-center justify-center"
               >
                 <Image
+                src=""
                   width={256}
                   height={256}
                   // src="/logos/logo-apple.png"
