@@ -31,19 +31,19 @@ export function MobileConvenience() {
         <Image
           width={256}
           height={256}
-          src="/image/iphone.png"
+          src="/image/callus.jpg"
           className="col-span-1 w-1/2 mx-auto lg:w-10/12"
-          alt="iphone-photo"
+          alt="elewade customer service"
         />
         <div className="col-span-1 mx-auto max-w-lg px-4 lg:px-0">
-          <div color="blue-gray" className="mb-4">
-            Mobile Convenience
+          <div color="blue-gray" className="mb-4 font-bold  ">
+            Why us 
           </div>
           <div
             
             className="mb-5 px-4 text-left  text-xl !text-gray-500 lg:px-0  "
           >
-            Access your learning materials on the go.
+            Free delivery 24/7 .
           </div>
 
           <div className="col-span-2 grid gap-5 grid-cols-2 ">

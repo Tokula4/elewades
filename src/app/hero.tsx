@@ -11,7 +11,7 @@ function Hero() {
         <div className="container mx-auto mt-32 grid h-full w-full grid-cols-1 place-items-center lg:mt-14 lg:grid-cols-2">
           <div className="col-span-1">
             <div  color="white" className="mb-4 scroll-m-20 text-white pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-              Elewade  <br /> Nigeria Limited
+              Elewade  Nigeria <br /> Limited
             </div>
             <div
               
@@ -27,7 +27,7 @@ function Hero() {
               <Button
                 size="lg"
                
-                className="flex bg-white text-black justify-center items-center gap-3"
+                className="flex bg-white text- justify-center items-center gap-3"
               >
         
                 Our Service
