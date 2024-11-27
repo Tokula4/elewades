@@ -12,7 +12,7 @@ export function InfoCard({ title, children }: InfoCardProps) {
   return (
     <Card color="transparent" shadow={false}>
       <CardBody className="grid px-0">
-        <div variant="h2" color="blue-gray" className="mb-2">
+        <div  color="blue-gray" className="mb-2">
           {title}
         </div>
         <div className=" font-normal">{children}</div>

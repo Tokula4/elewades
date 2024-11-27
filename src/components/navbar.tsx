@@ -16,7 +16,7 @@ function NavItem({ children, href }: NavItemProps) {
   return (
     <li>
       <div
-        as="a"
+       
         href={href || "#"}
         target={href ? "_blank" : "_self"}
         variant="small"
@@ -70,8 +70,8 @@ export function Navbar() {
          
           // href=""
           target="_blank"
-          variant="h6"
-          color={isScrolling ? "gray" : "white"}
+         
+          className={isScrolling ? "gray" : "white"}
         >
           Elewade Nigeria Limited
         </div>
