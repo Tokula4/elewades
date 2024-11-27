@@ -1,7 +1,4 @@
 import React from "react";
-
-
-
 interface InfoCardProps {
   title: string;
   children: React.ReactNode;
@@ -15,7 +12,7 @@ export function InfoCard({ title, children }: InfoCardProps) {
         <div  color="blue-gray" className="mb-2">
           {title}
         </div>
-        <div className=" font-normal">{children}</div>
+        <div className="font-normal">{children}</div>
       </div>
     </div>
   );
