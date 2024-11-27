@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import InfoCard from "@/components/info-card";
-import { Typography, Card, CardBody } from "@material-tailwind/react";
+import {  Card, CardBody } from "@material-tailwind/react";
 
 const OPTIONS = [
   {
@@ -36,15 +36,15 @@ export function MobileConvenience() {
           alt="iphone-photo"
         />
         <div className="col-span-1 mx-auto max-w-lg px-4 lg:px-0">
-          <Typography variant="h2" color="blue-gray" className="mb-4">
+          <div variant="h2" color="blue-gray" className="mb-4">
             Mobile Convenience
-          </Typography>
-          <Typography
+          </div>
+          <div
             variant="lead"
             className="mb-5 px-4 text-left  text-xl !text-gray-500 lg:px-0  "
           >
             Access your learning materials on the go.
-          </Typography>
+          </div>
 
           <div className="col-span-2 grid gap-5 grid-cols-2 ">
             {OPTIONS.map(({ title, description }) => (

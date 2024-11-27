@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Typography, Card, CardBody, Avatar } from "@material-tailwind/react";
+import { divdiv, Card, CardBody, Avatar } from "@material-tailwind/react";
 import { UserIcon } from "@heroicons/react/24/solid";
 import TestimonialCard from "../components/testimonial-card";
 
@@ -38,17 +38,17 @@ export function Testimonials() {
           <div className="mb-10 flex h-12 w-12 items-center justify-center rounded-lg bg-gray-900 text-white ">
             <UserIcon className="h-6 w-6" />
           </div>
-          <Typography variant="h2" color="blue-gray" className="mb-2">
+          <div  color="blue-gray" className="mb-2">
             What Clients Say
-          </Typography>
-          <Typography
-            variant="lead"
+          </div>
+          <div
+           
             className="mb-10 max-w-3xl text-center !text-gray-600"
           >
             Discover what our valued clients have to say about their experiences
             with our services. We take pride in delivering exceptional results
             and fostering lasting partnerships.
-          </Typography>
+          </div>
         </div>
         <div className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-3 lg:px-20">
           {TESTIMONIALS.map((props, key) => (
