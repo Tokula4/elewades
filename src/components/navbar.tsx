@@ -1,162 +1,183 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
 import {
-  Navbar as MTNavbar,
-  Collapse,
-  IconButton,
-  Button,
-  Typography
-} from "@material-tailwind/react";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-
-interface NavItemProps {
-  children: React.ReactNode;
-  href?: string;
-}
-function NavItem({ children, href }: NavItemProps) {
-  return (
-    <li>
-      <Typography
-        as="a"
-        href={href || "#"}
-        target={href ? "_blank" : "_self"}
-        variant="small"
-        className="font-medium"
-      >
-        {children}
-      </Typography>
-    </li>
-  );
-}
+import Link from "next/link";
 
 export function Navbar() {
-  const [open, setOpen] = React.useState(false);
-  const [isScrolling, setIsScrolling] = React.useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  function handleOpen() {
-    setOpen((cur) => !cur);
-  }
-
-  React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpen(false)
-    );
-  }, []);
-
-  React.useEffect(() => {
+  useEffect(() => {
     function handleScroll() {
-      if (window.scrollY > 0) {
-        setIsScrolling(true);
-      } else {
-        setIsScrolling(false);
-      }
+      setIsScrolling(window.scrollY > 0);
     }
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
-    <MTNavbar
-      fullWidth
-      shadow={false}
-      blurred={false}
-      color={isScrolling ? "white" : "transparent"}
-      className="fixed top-0 z-50 border-0"
+    <nav
+      className={`fixed top-0 z-50 w-full transition-colors ${
+        isScrolling ? "bg-white shadow-md" : "bg-transparent"
+      }`}
     >
-      <div className="container mx-auto flex items-center justify-between">
-        <Typography
-          as="a"
-          href="https://www.material-tailwind.com"
-          target="_blank"
-          variant="h6"
-          color={isScrolling ? "gray" : "white"}
-        >
-          Elewade Nigeria Limited
-        </Typography>
-        <ul
-          className={`ml-10 hidden items-center gap-6 lg:flex ${
+      <div className="container mx-auto flex items-center justify-between p-4">
+        {/* Logo */}
+        <Link
+          href="/"
+          className={`text-lg font-bold ${
             isScrolling ? "text-gray-900" : "text-white"
           }`}
         >
-          <NavItem>Home</NavItem>
-          <NavItem>About Us</NavItem>
-          <NavItem>Contact Us</NavItem>
-          <NavItem href="https://www.material-tailwind.com/docs/react/installation">
-            Docs
-          </NavItem>
+          Elewade Nigeria Limited
+        </Link>
+
+        {/* Desktop Menu */}
+        <ul className="hidden gap-8 lg:flex">
+          <li>
+            <Link
+              href="/"
+              className={`text-sm font-medium ${
+                isScrolling ? "text-gray-900" : "text-white"
+              }`}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/about"
+              className={`text-sm font-medium ${
+                isScrolling ? "text-gray-900" : "text-white"
+              }`}
+            >
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/contact"
+              className={`text-sm font-medium ${
+                isScrolling ? "text-gray-900" : "text-white"
+              }`}
+            >
+              Contact Us
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/services"
+              className={`text-sm font-medium ${
+                isScrolling ? "text-gray-900" : "text-white"
+              }`}
+            >
+              Our Services
+            </Link>
+          </li>
         </ul>
-        <div className="hidden gap-2 lg:flex lg:items-center">
-          <IconButton
-            variant="text"
-            color={isScrolling ? "gray" : "white"}
-            size="sm"
+
+        {/* Social Media & Actions */}
+        <div className="hidden items-center gap-4 lg:flex">
+          <Button
+            variant="ghost"
+            className={`${
+              isScrolling ? "text-gray-900" : "text-white"
+            } hover:text-primary`}
           >
-            <i className="fa-brands fa-twitter text-base" />
-          </IconButton>
-          <IconButton
-            variant="text"
-            color={isScrolling ? "gray" : "white"}
-            size="sm"
+            <i className="fa-brands fa-twitter" />
+          </Button>
+          <Button
+            variant="ghost"
+            className={`${
+              isScrolling ? "text-gray-900" : "text-white"
+            } hover:text-primary`}
           >
-            <i className="fa-brands fa-facebook text-base" />
-          </IconButton>
-          <IconButton
-            variant="text"
-            color={isScrolling ? "gray" : "white"}
-            size="sm"
+            <i className="fa-brands fa-facebook" />
+          </Button>
+          <Button
+            variant="ghost"
+            className={`${
+              isScrolling ? "text-gray-900" : "text-white"
+            } hover:text-primary`}
           >
-            <i className="fa-brands fa-instagram text-base" />
-          </IconButton>
-          <a href="https://www.material-tailwind.com/blocks" target="_blank">
-            <Button color={isScrolling ? "gray" : "white"} size="sm">
+            <i className="fa-brands fa-instagram" />
+          </Button>
+          <Link href="/services">
+            <Button variant="default" className="px-4">
               Our Services
             </Button>
-          </a>
+          </Link>
         </div>
-        <IconButton
-          variant="text"
-          color={isScrolling ? "gray" : "white"}
-          onClick={handleOpen}
-          className="ml-auto inline-block lg:hidden"
+
+        {/* Mobile Menu Trigger */}
+        <Button
+          variant="ghost"
+          className="lg:hidden"
+          onClick={() => setMenuOpen(!menuOpen)}
         >
-          {open ? (
-            <XMarkIcon strokeWidth={2} className="h-6 w-6" />
+          {menuOpen ? (
+            <XMarkIcon className="h-6 w-6" />
           ) : (
-            <Bars3Icon strokeWidth={2} className="h-6 w-6" />
+            <Bars3Icon className="h-6 w-6" />
           )}
-        </IconButton>
+        </Button>
       </div>
-      <Collapse open={open}>
-        <div className="container mx-auto mt-4 rounded-lg border-t border-blue-gray-50 bg-white px-6 py-5">
-          <ul className="flex flex-col gap-4 text-blue-gray-900">
-            <NavItem>Home</NavItem>
-            <NavItem>About Us</NavItem>
-            <NavItem>Contact Us</NavItem>
-            <NavItem href="https://www.material-tailwind.com/docs/react/installation">
-              Docs
-            </NavItem>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="bg-white lg:hidden">
+          <ul className="flex flex-col gap-4 p-4">
+            <li>
+              <Link href="/" className="text-sm font-medium text-gray-900">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" className="text-sm font-medium text-gray-900">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contact"
+                className="text-sm font-medium text-gray-900"
+              >
+                Contact Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/services"
+                className="text-sm font-medium text-gray-900"
+              >
+                Our Services
+              </Link>
+            </li>
           </ul>
-          <div className="mt-4 flex items-center gap-2">
-            <IconButton variant="text" color="gray" size="sm">
-              <i className="fa-brands fa-twitter text-base" />
-            </IconButton>
-            <IconButton variant="text" color="gray" size="sm">
-              <i className="fa-brands fa-facebook text-base" />
-            </IconButton>
-            <IconButton variant="text" color="gray" size="sm">
-              <i className="fa-brands fa-instagram text-base" />
-            </IconButton>
-            <a href="https://www.material-tailwind.com/blocks" target="_blank">
-              <Button color="gray" size="sm" className="ml-auto">
-                Blocks
-              </Button>
-            </a>
+          <div className="flex items-center gap-2 px-4 pb-4">
+            <Button variant="ghost">
+              <i className="fa-brands fa-twitter text-gray-900" />
+            </Button>
+            <Button variant="ghost">
+              <i className="fa-brands fa-facebook text-gray-900" />
+            </Button>
+            <Button variant="ghost">
+              <i className="fa-brands fa-instagram text-gray-900" />
+            </Button>
           </div>
         </div>
-      </Collapse>
-    </MTNavbar>
+      )}
+    </nav>
   );
 }
 
