@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Button } from "@material-tailwind/react";
+import { Button } from "@/components/ui/button";
 
 export function FixedPlugin() {
   return (
