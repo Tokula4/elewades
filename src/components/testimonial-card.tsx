@@ -1,5 +1,5 @@
 import React from "react";
-import {Avatar} from "@/components/ui/avatar"
+import {Avatar, AvatarImage , AvatarFallback} from "@/components/ui/avatar"
 interface TestimonialCardProps {
   img: string;
   feedback: string;
@@ -16,8 +16,11 @@ export function TestimonialCard({
   return (
     <div  className="items-center text-center">
       <div>
-        <Avatar src={img} className="mb-3" alt={client} size="lg" />
-        <div color="blue-gray">
+      <Avatar >
+      <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+      <AvatarFallback>CN</AvatarFallback>
+    </Avatar>
+        <div>
           {client}
         </div>
         <div  className="mb-3 font-medium !text-gray-700">
